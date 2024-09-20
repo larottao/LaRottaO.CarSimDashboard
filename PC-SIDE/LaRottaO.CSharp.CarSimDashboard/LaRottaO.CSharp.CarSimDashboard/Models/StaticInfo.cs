@@ -1,7 +1,10 @@
 ﻿using System.Runtime.InteropServices;
 
+//Based on the excellent work of mdjarvGet (Mathias Djärv), thank you!
+
 namespace LRottaO.CSharp.SimDashboardCtrl
 {
+
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct StaticInfo
     {

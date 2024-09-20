@@ -4,13 +4,16 @@ using System.Runtime.InteropServices;
 
 namespace LRottaO.CSharp.SimDashboardCtrl
 {
-    internal class AsettoCorsaTelemetry
-    {
-        private readonly MemoryMappedFile physicsMappedFile;
-        private readonly MemoryMappedFile staticMappedFile;
-        public Boolean telemetryConnectedSuccess = false;
 
-        public AsettoCorsaTelemetry()
+    //Based on the excellent work of mdjarvGet (Mathias Djärv), thank you!
+
+    public class AsettoCorsaTelemetry
+    {
+        private MemoryMappedFile physicsMappedFile;
+        private MemoryMappedFile staticMappedFile;
+        public Boolean telemetryConnectedSuccess { get; set; } = false;
+
+        public void initAssetoTelemety()
         {
             try
             {
@@ -26,6 +29,7 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         public Physics ReadPhysics()
         {
+            
             int size = Marshal.SizeOf(typeof(Physics));
 
             using (var accessor = physicsMappedFile.CreateViewAccessor(0, size))

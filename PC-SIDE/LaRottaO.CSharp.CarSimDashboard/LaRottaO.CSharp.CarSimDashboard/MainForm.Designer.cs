@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxFuel = new System.Windows.Forms.TextBox();
             this.radioAssetoData = new System.Windows.Forms.RadioButton();
-            this.radioTest = new System.Windows.Forms.RadioButton();
+            this.radioManualInput = new System.Windows.Forms.RadioButton();
             this.textBoxRpmFreq = new System.Windows.Forms.TextBox();
             this.textBoxKmhFreq = new System.Windows.Forms.TextBox();
             this.checkBoxUseFreqTable = new System.Windows.Forms.CheckBox();
@@ -166,16 +166,16 @@
             this.radioAssetoData.UseVisualStyleBackColor = true;
             this.radioAssetoData.CheckedChanged += new System.EventHandler(this.radioAssetoData_CheckedChanged);
             // 
-            // radioTest
+            // radioManualInput
             // 
-            this.radioTest.AutoSize = true;
-            this.radioTest.Location = new System.Drawing.Point(24, 73);
-            this.radioTest.Name = "radioTest";
-            this.radioTest.Size = new System.Drawing.Size(120, 25);
-            this.radioTest.TabIndex = 9;
-            this.radioTest.Text = "Manual Input";
-            this.radioTest.UseVisualStyleBackColor = true;
-            this.radioTest.CheckedChanged += new System.EventHandler(this.radioTest_CheckedChanged);
+            this.radioManualInput.AutoSize = true;
+            this.radioManualInput.Location = new System.Drawing.Point(24, 73);
+            this.radioManualInput.Name = "radioManualInput";
+            this.radioManualInput.Size = new System.Drawing.Size(120, 25);
+            this.radioManualInput.TabIndex = 9;
+            this.radioManualInput.Text = "Manual Input";
+            this.radioManualInput.UseVisualStyleBackColor = true;
+            this.radioManualInput.CheckedChanged += new System.EventHandler(this.radioManualInput_CheckedChanged);
             // 
             // textBoxRpmFreq
             // 
@@ -215,7 +215,7 @@
             this.groupBox1.Controls.Add(this.textBoxKmhFreq);
             this.groupBox1.Controls.Add(this.radioAssetoData);
             this.groupBox1.Controls.Add(this.textBoxRpmFreq);
-            this.groupBox1.Controls.Add(this.radioTest);
+            this.groupBox1.Controls.Add(this.radioManualInput);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox1.Location = new System.Drawing.Point(270, 183);
             this.groupBox1.Name = "groupBox1";
@@ -261,7 +261,7 @@
             this.radio10KRedLineMatchMaxPw.Checked = true;
             this.radio10KRedLineMatchMaxPw.Location = new System.Drawing.Point(24, 68);
             this.radio10KRedLineMatchMaxPw.Name = "radio10KRedLineMatchMaxPw";
-            this.radio10KRedLineMatchMaxPw.Size = new System.Drawing.Size(264, 56);
+            this.radio10KRedLineMatchMaxPw.Size = new System.Drawing.Size(300, 56);
             this.radio10KRedLineMatchMaxPw.TabIndex = 10;
             this.radio10KRedLineMatchMaxPw.TabStop = true;
             this.radio10KRedLineMatchMaxPw.Text = "The dashboard 10K redline (and red light) matches car\'s Max Power";
@@ -380,7 +380,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxFuel;
         private System.Windows.Forms.RadioButton radioAssetoData;
-        private System.Windows.Forms.RadioButton radioTest;
+        private System.Windows.Forms.RadioButton radioManualInput;
         private System.Windows.Forms.TextBox textBoxRpmFreq;
         private System.Windows.Forms.TextBox textBoxKmhFreq;
         private System.Windows.Forms.CheckBox checkBoxUseFreqTable;

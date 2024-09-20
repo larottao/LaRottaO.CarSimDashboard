@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace LaRottaO.CSharp.CarSimDashboard
 {
-    internal static class SerialPortUtils
+    internal static class GetAvailPorts
     {
         // Method to populate ComboBox with COM ports and device names
-        public static void populateComPortsWithDeviceNames(ComboBox comboBoxComPorts)
+        public static void populateComboBoxWithPortsAndDeviceNames(ComboBox comboBoxComPorts)
         {
             // Get the list of COM port names
             string[] ports = SerialPort.GetPortNames();
