@@ -11,7 +11,7 @@ Interface a chinese motorcycle dashboard to a game (Asseto Corsa) to indicate sp
 NOTES: Based on the excellent work of mdjarvGet (Mathias Djärv), thank you!
 
 - Show RPM and SPEED using Arduino [FAIL] - Unable to generate accurate PWM below 20 hz
-- Show RPM and SPEED using Raspberry Pi Pico [FAIL] - Pico's PWM generation works "fine" between 1 and 255 hz, but fails at around 64-90.
+- Show RPM and SPEED using Raspberry Pi Pico [FAIL] - Pico's PWM generation works "fine" between 1 and 64 hz, fails between 64-90, and works again between 90-255 Hz.
 - Show RPM and SPEED using ESP32 [PARTIAL SUCCESS] - The PWM generation for the RPMs works great at first, but after some use the KM/H gets wonky / reason unknown.
 
 NOTES: Fuel Level and Gear are not yet implemented
