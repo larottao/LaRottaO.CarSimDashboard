@@ -9,11 +9,11 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
     public class AsettoCorsaTelemetry
     {
-        private MemoryMappedFile physicsMappedFile;
-        private MemoryMappedFile staticMappedFile;
+        private readonly MemoryMappedFile physicsMappedFile;
+        private readonly MemoryMappedFile staticMappedFile;
         public Boolean telemetryConnectedSuccess { get; set; } = false;
 
-        public void initAssetoTelemety()
+        public AsettoCorsaTelemetry()
         {
             try
             {

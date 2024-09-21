@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.textBoxKMH = new System.Windows.Forms.TextBox();
             this.textBoxRPM = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,16 +53,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonDisconnectPort = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.FormTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 50;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // textBoxKMH
             // 
@@ -76,6 +70,7 @@
             this.textBoxKMH.TabIndex = 0;
             this.textBoxKMH.Text = "000";
             this.textBoxKMH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
             // 
             // textBoxRPM
             // 
@@ -88,6 +83,7 @@
             this.textBoxRPM.TabIndex = 1;
             this.textBoxRPM.Text = "000";
             this.textBoxRPM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+     
             // 
             // label1
             // 
@@ -130,6 +126,7 @@
             this.textBoxGear.TabIndex = 4;
             this.textBoxGear.Text = "1";
             this.textBoxGear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      
             // 
             // label4
             // 
@@ -152,6 +149,7 @@
             this.textBoxFuel.TabIndex = 6;
             this.textBoxFuel.Text = "000";
             this.textBoxFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
             // 
             // radioAssetoData
             // 
@@ -164,7 +162,7 @@
             this.radioAssetoData.TabStop = true;
             this.radioAssetoData.Text = "Asseto Corsa (when racing window is open)";
             this.radioAssetoData.UseVisualStyleBackColor = true;
-            this.radioAssetoData.CheckedChanged += new System.EventHandler(this.radioAssetoData_CheckedChanged);
+            this.radioAssetoData.Click += new System.EventHandler(this.radioAssetoData_Click);
             // 
             // radioManualInput
             // 
@@ -175,7 +173,7 @@
             this.radioManualInput.TabIndex = 9;
             this.radioManualInput.Text = "Manual Input";
             this.radioManualInput.UseVisualStyleBackColor = true;
-            this.radioManualInput.CheckedChanged += new System.EventHandler(this.radioManualInput_CheckedChanged);
+            this.radioManualInput.Click += new System.EventHandler(this.radioManualInput_Click);
             // 
             // textBoxRpmFreq
             // 
@@ -332,6 +330,11 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "LaRottaO";
             // 
+            // FormTimer
+            // 
+            this.FormTimer.Enabled = true;
+            this.FormTimer.Tick += new System.EventHandler(this.FormTimer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -355,7 +358,6 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Physical Dashboard for Asseto Corsa";
-            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -369,8 +371,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox textBoxKMH;
         private System.Windows.Forms.TextBox textBoxRPM;
         private System.Windows.Forms.Label label1;
@@ -395,6 +395,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonDisconnectPort;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Timer FormTimer;
     }
 }
 

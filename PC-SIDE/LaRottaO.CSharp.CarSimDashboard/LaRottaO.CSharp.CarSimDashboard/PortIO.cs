@@ -14,14 +14,14 @@ namespace LaRottaO.CSharp.CarSimDashboard
 
         private SerialPort serialPort;
 
-        public Boolean isPortCurrentlyOpen() {
-
-            if (serialPort == null) {
+        public Boolean isPortCurrentlyOpen()
+        {
+            if (serialPort == null)
+            {
                 return false;
             }
 
             return serialPort.IsOpen;
-
         }
 
         public Boolean tryPortInit(String portName)
@@ -45,16 +45,14 @@ namespace LaRottaO.CSharp.CarSimDashboard
             }
         }
 
-        public Tuple<Boolean,String> serialSendSuccess(int rpm, int speed, int gas, int gear)
+        public Tuple<Boolean, String> tryToSendMessage(String message)
         {
-            if (serialPort ==null)
+            if (serialPort == null || !isPortCurrentlyOpen())
             {
                 return new Tuple<Boolean, String>(false, "PORT IS NOT OPEN");
             }
 
-            string message = $"#{rpm:D3},{speed:D3},{gas:D3},{gear:D1}$";
-
-            if (message.Equals(lastSentMessage))
+            if (lastSentMessage.Equals(message))
             {
                 return new Tuple<Boolean, String>(true, "ALREADY SENT");
             }
@@ -64,17 +62,19 @@ namespace LaRottaO.CSharp.CarSimDashboard
             try
             {
                 serialPort.Write(message + "\n");
+
+                //Console.Write(message + "\n");
+
+                // For debug purposes you can read the response from the uC and print it
+                //string response = serialPort.ReadLine(); // This will block until a newline character is received
+                //Console.WriteLine("Received: " + response);
+
                 return new Tuple<Boolean, String>(true, "SENT OK");
             }
             catch (Exception ex)
             {
-                tryClosePort();             
                 return new Tuple<Boolean, String>(false, ex.ToString());
             }
-
-            // For debug purposes read the response from the serial port and print it
-            //string response = serialPort.ReadLine(); // This will block until a newline character is received
-            //Console.WriteLine("Received: " + response);
         }
 
         public Boolean tryClosePort()

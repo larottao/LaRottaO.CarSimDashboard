@@ -7,7 +7,7 @@
 #define OUTPUT_PIN1 16  // Speed pin
 #define OUTPUT_PIN2 17  // RPM pin
 
-const int PWM_CHANNEL1 = 0;  // PWM channel for speed
+const int PWM_CHANNEL1 = 1;  // PWM channel for speed
 const int PWM_CHANNEL2 = 4;  // PWM channel for RPM
 const int PWM_RESOLUTION = 8;  // 8-bit resolution (0-255)
 const int PWM_FREQ_INITIAL = 0;  // Initial frequency
@@ -40,7 +40,7 @@ void loop() {
       // Strip start and end characters
       message = message.substring(1, message.length() - 1);
 
-      // Parse the message
+      // Parse the message based on the header
       parseMessage(message);
     } else {
       sendUARTMessage("Invalid message format: " + message);
@@ -49,20 +49,47 @@ void loop() {
 }
 
 void parseMessage(String message) {
-  // Split the message into components
-  int commaIndex1 = message.indexOf(',');
-  int commaIndex2 = message.indexOf(',', commaIndex1 + 1);
-  int commaIndex3 = message.indexOf(',', commaIndex2 + 1);
-
-  // Extract the values for RPM and Speed
-  int rpm = message.substring(0, commaIndex1).toInt();
-  int speed = message.substring(commaIndex1 + 1, commaIndex2).toInt();
-
-  // Set the Speed and RPM
-  setSpeedAndRPM(speed, rpm);
+  // Check for known message headers and extract values
+  if (message.startsWith("rpm:")) {
+    int rpm = message.substring(4).toInt();  // Extract RPM value
+    setRPM(rpm);
+  }
+  else if (message.startsWith("speed:")) {
+    int speed = message.substring(6).toInt();  // Extract speed value
+    setSpeed(speed);
+  }
+  else if (message.startsWith("fuel:")) {
+    int fuel = message.substring(5).toInt();  // Extract fuel value
+    setFuel(fuel);
+  }
+  else if (message.startsWith("gear:")) {
+    int gear = message.substring(5).toInt();  // Extract gear value
+    setGear(gear);
+  }
+  else {
+    sendUARTMessage("Unknown message type: " + message);
+  }
 }
 
-void setSpeedAndRPM(int speed, int rpm) {
+// Functions to handle the values
+void setRPM(int rpm) {
+  
+   // Update RPM if changed
+  if (rpm != currentRPM) {
+    currentRPM = rpm;
+    if (rpm == 0) {
+      // Turn off PWM for RPM
+      ledcWrite(PWM_CHANNEL2, 0);
+    } else {
+      // Set the frequency and a 50% duty cycle for RPM
+      ledcWriteTone(PWM_CHANNEL2, rpm);
+      ledcWrite(PWM_CHANNEL2, 128);  // 50% duty cycle (128 out of 255)
+    }
+  }
+}
+
+void setSpeed(int speed) {
+
   // Update speed if changed
   if (speed != currentSpeed) {
     currentSpeed = speed;
@@ -76,19 +103,18 @@ void setSpeedAndRPM(int speed, int rpm) {
     }
   }
 
-  // Update RPM if changed
-  if (rpm != currentRPM) {
-    currentRPM = rpm;
-    if (rpm == 0) {
-      // Turn off PWM for RPM
-      ledcWrite(PWM_CHANNEL2, 0);
-    } else {
-      // Set the frequency and a 50% duty cycle for RPM
-      ledcWriteTone(PWM_CHANNEL2, rpm);
-      ledcWrite(PWM_CHANNEL2, 128);  // 50% duty cycle (128 out of 255)
-    }
-  }
 }
+
+void setFuel(int fuel) {
+  // Logic to handle fuel value
+  Serial.println("Fuel: " + String(fuel));
+}
+
+void setGear(int gear) {
+  // Logic to handle gear value
+  Serial.println("Gear: " + String(gear));
+}
+
 
 void sendUARTMessage(String message) {
   // Send a message back to the PC

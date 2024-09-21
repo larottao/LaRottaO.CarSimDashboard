@@ -11,18 +11,23 @@ namespace LaRottaO.CSharp.CarSimDashboard
     {
 
         public static AsettoCorsaTelemetry telemetry { get; set; }
-
+                
         public static Tuple<Boolean, String> tryInitAssetoConnection()
         {
+
+            if (telemetry != null && telemetry.telemetryConnectedSuccess) {
+
+                return new Tuple<Boolean, String>(true, "ALREADY DONE");
+            }
+
+            telemetry = new AsettoCorsaTelemetry();
+
             if (!CheckAssetoRunning.isRunning())
             {
 
                 return new Tuple<Boolean, String>(false, "ASSETO RACING WINDOW NOT OPEN");
             }
-
-            telemetry = new AsettoCorsaTelemetry();
-
-            telemetry.initAssetoTelemety();
+      
 
             if (!telemetry.telemetryConnectedSuccess)
             {

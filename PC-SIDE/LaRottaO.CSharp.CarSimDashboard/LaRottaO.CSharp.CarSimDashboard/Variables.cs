@@ -5,7 +5,22 @@ namespace LaRottaO.CSharp.CarSimDashboard
 {
     public static class Variables
     {
-             
+
+        public enum DATASOURCE { ASSETO, MANUAL_INPUT }
+        public static DATASOURCE currentDataSource { get; set; }
+
+        //Values extracted from the sim
+
+        public static double rpms { get; set; } = 0;
+        public static double kmh { get; set; } = 0;
+        public static int gear { get; set; } = 1;
+        public static int fuel { get; set; } = 0;
+
+        //Convert the RPM and KM/H into pulses that the dashboard can understand
+
+        public static int equivRpmFreq { get; set; } = 0;
+        public static int equivKmhFreq { get; set; } = 0;
+
 
         //Values calibrated for my motorcycle dashbord, tune as required
 

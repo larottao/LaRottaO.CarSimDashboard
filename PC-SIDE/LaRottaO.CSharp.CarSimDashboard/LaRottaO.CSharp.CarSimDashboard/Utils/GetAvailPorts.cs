@@ -27,7 +27,7 @@ namespace LaRottaO.CSharp.CarSimDashboard
             // Optionally select the first available port
             if (comboBoxComPorts.Items.Count > 0)
             {
-                comboBoxComPorts.SelectedIndex = 0;
+                comboBoxComPorts.SelectedIndex = comboBoxComPorts.Items.Count - 1;
             }
         }
 
