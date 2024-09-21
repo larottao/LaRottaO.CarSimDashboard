@@ -5,7 +5,7 @@ Interface a chinese motorcycle dashboard to a game (Asseto Corsa) to indicate sp
 
 2024-09-20 Changelog
 
-- Show RPM and SPEED using ESP32 [SUCCESS] - The physical dashboard requires a slower update rate than engine RPMs. Instead of sending RPM, Speed, Gas and Fuel data on a single serial packet, the solution was using independent data packets for each item, sent at different rates.
+- Show RPM and SPEED using ESP32 [SUCCESS] - The physical dashboard requires a slower update rate for the speed data than the engine RPMs data. So, instead of sending RPM, Speed, Gas and Fuel data on a single serial packet, the solution was using independent data packets for each item, sent at different rates with different timers.
 
 2024-09-19 Changelog
 
