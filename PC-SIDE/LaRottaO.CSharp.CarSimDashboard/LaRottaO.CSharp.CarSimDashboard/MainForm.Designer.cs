@@ -295,6 +295,7 @@
             this.radioMatchRealScale.TabIndex = 9;
             this.radioMatchRealScale.Text = "Match dashboard face";
             this.radioMatchRealScale.UseVisualStyleBackColor = true;
+            this.radioMatchRealScale.CheckedChanged += new System.EventHandler(this.radioMatchRealScale_CheckedChanged);
             // 
             // buttonConnectPort
             // 
@@ -335,7 +336,6 @@
             // FormTimer
             // 
             this.FormTimer.Enabled = true;
-            this.FormTimer.Interval = 1000;
             this.FormTimer.Tick += new System.EventHandler(this.FormTimer_Tick);
             // 
             // labelInfo

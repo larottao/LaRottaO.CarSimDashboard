@@ -41,12 +41,12 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             sendSpeedDataTimer.AutoReset = true;
 
             // Timer for sending fuel data
-            sendFuelDataTimer = new System.Timers.Timer(1000);
+            sendFuelDataTimer = new System.Timers.Timer(500);
             sendFuelDataTimer.Elapsed += OnFuelDataTimerElapsed;
             sendFuelDataTimer.AutoReset = true;
 
             // Timer for sending gear data
-            sendGearDataTimer = new System.Timers.Timer(200);
+            sendGearDataTimer = new System.Timers.Timer(100);
             sendGearDataTimer.Elapsed += OnGearDataTimerElapsed;
             sendGearDataTimer.AutoReset = true;
         }
@@ -187,8 +187,7 @@ namespace LRottaO.CSharp.SimDashboardCtrl
                 {
                     Variables.equivRpmFreq = (int)Math.Round(Interpolation.interpolate(Variables.rpms, Variables.RealRpmTable));
                 }
-
-                if (radio10KRedLineMatchMaxPw.Checked)
+                else if (radio10KRedLineMatchMaxPw.Checked)
                 {
                     Variables.equivRpmFreq = (int)Math.Round(Interpolation.interpolate(Variables.rpms, Variables.RpmTable10KRedline));
                 }
@@ -328,6 +327,10 @@ namespace LRottaO.CSharp.SimDashboardCtrl
         }
 
         private void radio10KRedLineMatchMaxPw_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void radioMatchRealScale_CheckedChanged(object sender, EventArgs e)
         {
         }
     }
