@@ -9,13 +9,13 @@
 #define OUTPUT_PIN1 16  // Speed pin
 #define OUTPUT_PIN2 17  // RPM pin
 
-#define OUTPUT_GEAR_PIN_1 32
-#define OUTPUT_GEAR_PIN_2 33
-#define OUTPUT_GEAR_PIN_3 25
+#define OUTPUT_GEAR_PIN_7 32
+#define OUTPUT_GEAR_PIN_6 33
+#define OUTPUT_GEAR_PIN_5 25
 #define OUTPUT_GEAR_PIN_4 26
-#define OUTPUT_GEAR_PIN_5 27
-#define OUTPUT_GEAR_PIN_6 14
-#define OUTPUT_GEAR_PIN_7 12
+#define OUTPUT_GEAR_PIN_3 27
+#define OUTPUT_GEAR_PIN_2 14
+#define OUTPUT_GEAR_PIN_1 12
 
 #define OUTPUT_FUEL_PIN_1 22
 #define OUTPUT_FUEL_PIN_2 21
@@ -192,9 +192,7 @@ void setFuel(int fuel) {
     }
     else if(fuel == 5){
     digitalWrite(OUTPUT_FUEL_PIN_5, HIGH);
-    }   
-
-    blinkLed();
+    }     
 
   }
 }
@@ -229,8 +227,6 @@ void setGear(int gear) {
     else if(gear == 7){
     digitalWrite(OUTPUT_GEAR_PIN_7, HIGH);
     }
-
-    blinkLed();
     
   }
 

@@ -24,12 +24,12 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             InitializeComponent();
 
             // Timer for reading sim data
-            simDataTimer = new System.Timers.Timer(50);
+            simDataTimer = new System.Timers.Timer(100);
             simDataTimer.Elapsed += OnSimDataTimerElapsed;
             simDataTimer.AutoReset = true;
 
             // Timer for sending RPM data
-            sendRpmDataTimer = new System.Timers.Timer(50);
+            sendRpmDataTimer = new System.Timers.Timer(100);
             sendRpmDataTimer.Elapsed += OnRpmDataTimerElapsed;
             sendRpmDataTimer.AutoReset = true;
 
@@ -44,7 +44,7 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             sendFuelDataTimer.AutoReset = true;
 
             // Timer for sending gear data
-            sendGearDataTimer = new System.Timers.Timer(500);
+            sendGearDataTimer = new System.Timers.Timer(200);
             sendGearDataTimer.Elapsed += OnGearDataTimerElapsed;
             sendGearDataTimer.AutoReset = true;
         }
