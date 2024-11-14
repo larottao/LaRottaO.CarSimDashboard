@@ -89,15 +89,19 @@ namespace LRottaO.CSharp.SimDashboardCtrl
         private void readDataForUIAndBoard()
         {
             if (Variables.currentDataSource == DATASOURCE.ASSETO &&
-                CheckAssetoRunning.isRunning() &&
-              AssetoIO.telemetry.telemetryConnectedSuccess)
+                CheckAssetoRunning.isRunning())
             {
-                Physics physics = AssetoIO.telemetry.ReadPhysics();
+                AssetoIO.tryInitAssetoConnection();
 
-                Variables.fuel = Convert.ToInt32(physics.Fuel);
-                Variables.gear = physics.Gear - 1;
-                Variables.rpms = physics.Rpms;
-                Variables.kmh = Math.Round(physics.SpeedKmh, 0);
+                if (AssetoIO.telemetry.telemetryConnectedSuccess)
+                {
+                    Physics physics = AssetoIO.telemetry.ReadPhysics();
+
+                    Variables.fuel = Convert.ToInt32(physics.Fuel);
+                    Variables.gear = physics.Gear - 1;
+                    Variables.rpms = physics.Rpms;
+                    Variables.kmh = Math.Round(physics.SpeedKmh, 0);
+                }
             }
             else
             {
