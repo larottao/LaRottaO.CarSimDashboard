@@ -92,7 +92,10 @@ void loop() {
 
 void parseMessage(String message) {
   // Check for known message headers and extract values
-  if (message.startsWith("rpm:")) {
+    if (message.startsWith("ident")) {    
+    ident();
+  }
+  else if (message.startsWith("rpm:")) {
     int rpm = message.substring(4).toInt();  // Extract RPM value
     setRPM(rpm);
   }
@@ -113,7 +116,10 @@ void parseMessage(String message) {
   }
 }
 
-// Functions to handle the values
+void ident() {   
+   sendUARTMessage("larottao-dashboard");
+}
+
 void setRPM(int rpm) {
   
    // Update RPM if changed

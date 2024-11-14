@@ -6,27 +6,29 @@ using System.Windows.Forms;
 using System.Timers;
 using System.IO.Ports;
 using static LaRottaO.CSharp.CarSimDashboard.Variables;
+using LaRottaO.CSharp.CarSimDashboard.Services;
+using System.Threading.Tasks;
 
 namespace LRottaO.CSharp.SimDashboardCtrl
 {
     public partial class MainForm : Form
     {
-        private System.Timers.Timer simDataTimer;
+        private System.Timers.Timer readDataTimer;
         private System.Timers.Timer sendRpmDataTimer;
         private System.Timers.Timer sendSpeedDataTimer;
         private System.Timers.Timer sendFuelDataTimer;
         private System.Timers.Timer sendGearDataTimer;
 
-        private PortIO portIO = new PortIO();
+        private readonly IUsb _usb = new UsbService();
 
         public MainForm()
         {
             InitializeComponent();
 
             // Timer for reading sim data
-            simDataTimer = new System.Timers.Timer(100);
-            simDataTimer.Elapsed += OnSimDataTimerElapsed;
-            simDataTimer.AutoReset = true;
+            readDataTimer = new System.Timers.Timer(50);
+            readDataTimer.Elapsed += OnReadDataTimerElapsed;
+            readDataTimer.AutoReset = true;
 
             // Timer for sending RPM data
             sendRpmDataTimer = new System.Timers.Timer(100);
@@ -51,39 +53,40 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         public void StopTimers()
         {
-            simDataTimer.Stop();
+            readDataTimer.Stop();
             sendRpmDataTimer.Stop();
             sendSpeedDataTimer.Stop();
             sendFuelDataTimer?.Stop();
             sendGearDataTimer?.Stop();
         }
 
-        private void OnSimDataTimerElapsed(object sender, ElapsedEventArgs e)
+        private void OnReadDataTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            ReadSimData();
+            readDataForUIAndBoard();
         }
 
         private void OnRpmDataTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            SendRpmData();
+            SendDataToBoard($"#rpm:{Variables.equivRpmFreq}$");
         }
 
         private void OnSpeedDataTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            SendSpeedData();
+            SendDataToBoard($"#speed:{Variables.equivKmhFreq}$");
         }
 
         private void OnFuelDataTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            SendFuelData();
+            double fuelInterpolationResult = Interpolation.interpolate(Variables.fuel, Variables.FuelTable);
+            SendDataToBoard($"#fuel:{Math.Round(fuelInterpolationResult, 1)}$");
         }
 
         private void OnGearDataTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            SendGearData();
+            SendDataToBoard($"#gear:{Variables.gear}$");
         }
 
-        private void ReadSimData()
+        private void readDataForUIAndBoard()
         {
             if (Variables.currentDataSource == DATASOURCE.ASSETO &&
                 CheckAssetoRunning.isRunning() &&
@@ -136,69 +139,29 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             convertRpmsAndSpeedIntoFrequencies();
         }
 
-        private void SendRpmData()
+        private void SendDataToBoard(String data)
         {
-            string message = $"#rpm:{Variables.equivRpmFreq}$";
+            var result = _usb.sendDataToBoard(data);
 
-            Tuple<Boolean, String> sendResult = portIO.tryToSendMessage(message);
-
-            if (!sendResult.Item1)
+            if (!result.success)
             {
-                errorSendingSerialMssage(sendResult.Item2);
+                errorSendingSerialMssage();
             }
         }
 
-        private void SendSpeedData()
-        {
-            string message = $"#speed:{Variables.equivKmhFreq}$";
-
-            Tuple<Boolean, String> sendResult = portIO.tryToSendMessage(message);
-
-            if (!sendResult.Item1)
-            {
-                errorSendingSerialMssage(sendResult.Item2);
-            }
-        }
-
-        private void SendFuelData()
-        {
-            String message = $"#fuel:{Variables.fuel}$";
-
-            Tuple<Boolean, String> sendResult = portIO.tryToSendMessage(message);
-
-            if (!sendResult.Item1)
-            {
-                errorSendingSerialMssage(sendResult.Item2);
-            }
-        }
-
-        private void SendGearData()
-        {
-            String message = $"#gear:{Variables.gear}$";
-
-            Tuple<Boolean, String> sendResult = portIO.tryToSendMessage(message);
-
-            if (!sendResult.Item1)
-            {
-                errorSendingSerialMssage(sendResult.Item2);
-            }
-        }
-
-        private void errorSendingSerialMssage(String reason)
+        private void errorSendingSerialMssage()
         {
             sendRpmDataTimer.Stop();
             sendSpeedDataTimer.Stop();
             sendFuelDataTimer.Stop();
             sendGearDataTimer.Stop();
 
-            portIO.tryClosePort();
-
             CrossThreadOps.setControlEnabled(buttonConnectPort, true);
             CrossThreadOps.setControlEnabled(buttonDisconnectPort, false);
 
-            CrossThreadOps.SetControlText(labelInfo, reason);
+            //CrossThreadOps.SetControlText(labelInfo, reason);
 
-            Console.WriteLine("ERROR WHILE SENDING DATA TROUGH SERIAL: " + reason);
+            Console.WriteLine("ERROR WHILE SENDING DATA TROUGH SERIAL: ");
         }
 
         private void updateFormTextboxes()
@@ -257,13 +220,43 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GetAvailPorts.populateComboBoxWithPortsAndDeviceNames(comboBoxComPorts);
-            Variables.currentDataSource = Variables.DATASOURCE.MANUAL_INPUT;
-            simDataTimer.Start();
-            dataSourceRadioButtonLogic();
+            BoardInitialization();
+            AssetoInitialization();
+
+            readDataTimer.Start();
         }
 
-        private void setTextBoxesEnabled(Boolean value)
+        private void BoardInitialization()
+        {
+            Console.WriteLine(_usb.connectToBoard());
+
+            if (_usb.isBoardConnected())
+            {
+                labelBoardStatus.Text = "Board: Connected";
+
+                CrossThreadOps.setControlEnabled(buttonConnectPort, false);
+                CrossThreadOps.setControlEnabled(buttonDisconnectPort, true);
+
+                sendRpmDataTimer.Start();
+                sendSpeedDataTimer.Start();
+                sendFuelDataTimer.Start();
+                sendGearDataTimer.Start();
+            }
+        }
+
+        private void AssetoInitialization()
+        {
+            if (CheckAssetoRunning.isRunning())
+            {
+                dataSourceRadioButtonLogic(DATASOURCE.ASSETO);
+            }
+            else
+            {
+                dataSourceRadioButtonLogic(DATASOURCE.MANUAL_INPUT);
+            }
+        }
+
+        private void setUserTextBoxesEnabled(Boolean value)
         {
             textBoxRPM.Enabled = value;
             textBoxKMH.Enabled = value;
@@ -273,62 +266,30 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            portIO.tryClosePort();
             StopTimers();
+            _usb.disconnectBoard();
         }
 
         private void buttonConnectPort_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(comboBoxComPorts.Text))
-            {
-                return;
-            }
-
-            String portName = comboBoxComPorts.Text.Substring(0, comboBoxComPorts.Text.IndexOf("|")).Trim();
-
-            Tuple<Boolean, String> connSuccess = portIO.tryPortInit(portName);
-
-            CrossThreadOps.setControlEnabled(buttonConnectPort, false);
-            CrossThreadOps.setControlEnabled(buttonDisconnectPort, true);
-
-            if (connSuccess.Item1)
-            {
-                dataSourceRadioButtonLogic();
-
-                sendRpmDataTimer.Start();
-                sendSpeedDataTimer.Start();
-                sendFuelDataTimer.Start();
-                sendGearDataTimer.Start();
-            }
-            else
-            {
-                labelInfo.Text = connSuccess.Item2;
-            }
+            BoardInitialization();
         }
 
-        private void dataSourceRadioButtonLogic()
+        private void dataSourceRadioButtonLogic(DATASOURCE newDataSource)
         {
+            Variables.currentDataSource = newDataSource;
+
             if (Variables.currentDataSource == DATASOURCE.ASSETO)
             {
-                Tuple<Boolean, String> assetoConnResult = AssetoIO.tryInitAssetoConnection();
-
-                if (assetoConnResult.Item1)
-                {
-                    setTextBoxesEnabled(false);
-                    radioAssetoData.Checked = true;
-                    radioManualInput.Checked = false;
-                }
-                else
-                {
-                    radioAssetoData.Checked = false;
-                    radioManualInput.Checked = true;
-                    labelInfo.Text = assetoConnResult.Item2;
-                }
+                setUserTextBoxesEnabled(false);
+                radioAssetoData.Checked = true;
+                radioManualInput.Checked = false;
             }
-
-            if (Variables.currentDataSource == DATASOURCE.MANUAL_INPUT)
+            else if (Variables.currentDataSource == DATASOURCE.MANUAL_INPUT)
             {
-                setTextBoxesEnabled(true);
+                setUserTextBoxesEnabled(true);
+                radioAssetoData.Checked = false;
+                radioManualInput.Checked = true;
             }
         }
 
@@ -339,7 +300,9 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             sendFuelDataTimer.Stop();
             sendGearDataTimer.Stop();
 
-            portIO.tryClosePort();
+            _usb.disconnectBoard();
+
+            labelBoardStatus.Text = "Board: Disconnected";
 
             CrossThreadOps.setControlEnabled(buttonConnectPort, true);
             CrossThreadOps.setControlEnabled(buttonDisconnectPort, false);
@@ -352,14 +315,16 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         private void radioAssetoData_Click(object sender, EventArgs e)
         {
-            Variables.currentDataSource = Variables.DATASOURCE.ASSETO;
-            dataSourceRadioButtonLogic();
+            AssetoInitialization();
         }
 
         private void radioManualInput_Click(object sender, EventArgs e)
         {
-            Variables.currentDataSource = Variables.DATASOURCE.MANUAL_INPUT;
-            dataSourceRadioButtonLogic();
+            dataSourceRadioButtonLogic(DATASOURCE.MANUAL_INPUT);
+        }
+
+        private void radio10KRedLineMatchMaxPw_CheckedChanged(object sender, EventArgs e)
+        {
         }
     }
 }

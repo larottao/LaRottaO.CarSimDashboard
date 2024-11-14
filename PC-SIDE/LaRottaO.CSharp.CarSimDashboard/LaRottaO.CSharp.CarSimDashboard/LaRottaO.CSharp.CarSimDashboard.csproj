@@ -47,25 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsettoCorsaTelemetry.cs" />
-    <Compile Include="AssetoIO.cs" />
-    <Compile Include="CrossThreadOps.cs" />
-    <Compile Include="PortIO.cs" />
+    <Compile Include="Asseto\AsettoCorsaTelemetry.cs" />
+    <Compile Include="Asseto\AssetoIO.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\IAsseto.cs" />
+    <Compile Include="Services\UsbService.cs" />
+    <Compile Include="Usb\EnumerateConnectedDevices.cs" />
+    <Compile Include="Usb\Models\ConnectedDevice.cs" />
+    <Compile Include="Utils\CrossThreadOps.cs" />
+    <Compile Include="Interfaces\IUsb.cs" />
     <Compile Include="Utils\Interpolation.cs" />
-    <Compile Include="Utils\GetAvailPorts.cs" />
     <Compile Include="Utils\BinarySearch.cs" />
-    <Compile Include="Utils\CheckAssetoRunning.cs" />
+    <Compile Include="Asseto\CheckAssetoRunning.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Physics.cs" />
+    <Compile Include="Asseto\Models\Physics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\StaticInfo.cs" />
-    <Compile Include="Models\ValuePair.cs" />
+    <Compile Include="Asseto\Models\StaticInfo.cs" />
+    <Compile Include="Asseto\Models\ValuePair.cs" />
     <Compile Include="Variables.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -96,5 +100,6 @@
   <ItemGroup>
     <None Include="Resources\Dashboard.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

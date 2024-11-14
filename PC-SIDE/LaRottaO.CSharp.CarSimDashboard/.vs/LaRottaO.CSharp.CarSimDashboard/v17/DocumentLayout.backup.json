@@ -3,40 +3,68 @@
   "WorkspaceRootPath": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\crossthreadops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\crossthreadops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\utils\\interpolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\utils\\interpolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\utils\\getavailports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\utils\\getavailports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\services\\usbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\services\\usbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\portio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\portio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\interfaces\\iusb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\interfaces\\iusb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\assetoio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\assetoio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\asettocorsatelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\asettocorsatelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\usb\\models\\connecteddevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\usb\\models\\connecteddevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\larottao.csharp.carsimdashboard\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\usb\\enumerateconnecteddevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\usb\\enumerateconnecteddevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\asseto\\checkassetorunning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\asseto\\checkassetorunning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\interfaces\\iasseto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\interfaces\\iasseto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\utils\\crossthreadops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\utils\\crossthreadops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\asseto\\asettocorsatelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\asseto\\asettocorsatelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|c:\\repositorios\\la_rotta\\larottao.carsimdashboard\\pc-side\\larottao.csharp.carsimdashboard\\larottao.csharp.carsimdashboard\\asseto\\assetoio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01055D9C-9782-4DFC-8921-B2B2142FE256}|LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard.csproj|solutionrelative:larottao.csharp.carsimdashboard\\asseto\\assetoio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,98 +82,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Variables.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T18:45:38.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetAvailPorts.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Utils\\GetAvailPorts.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Utils\\GetAvailPorts.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Utils\\GetAvailPorts.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Utils\\GetAvailPorts.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAwDUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T18:43:02.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AsettoCorsaTelemetry.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\AsettoCorsaTelemetry.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\AsettoCorsaTelemetry.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\AsettoCorsaTelemetry.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\AsettoCorsaTelemetry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T18:22:06.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AssetoIO.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\AssetoIO.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\AssetoIO.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\AssetoIO.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\AssetoIO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T18:17:17.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
+              "Title": "Interpolation.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Utils\\Interpolation.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Utils\\Interpolation.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Utils\\Interpolation.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Utils\\Interpolation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T18:05:59.248Z",
+              "WhenOpened": "2024-11-14T21:48:32.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PortIO.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\PortIO.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\PortIO.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\PortIO.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\PortIO.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAqwCkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T17:58:24.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.cs",
               "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\MainForm.cs",
               "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.cs",
               "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\MainForm.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAqwC4AAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAANUAAAAAAAAAAAAlwN4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T04:39:28.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.cs",
               "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\MainForm.cs",
@@ -157,13 +120,169 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsbService.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Services\\UsbService.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Services\\UsbService.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Services\\UsbService.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Services\\UsbService.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAwHAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:40:38.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUsb.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IUsb.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IUsb.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IUsb.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IUsb.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAnwBAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:33:49.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConnectedDevice.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Usb\\Models\\ConnectedDevice.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Usb\\Models\\ConnectedDevice.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Usb\\Models\\ConnectedDevice.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Usb\\Models\\ConnectedDevice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:55:45.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AsettoCorsaTelemetry.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Asseto\\AsettoCorsaTelemetry.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Asseto\\AsettoCorsaTelemetry.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Asseto\\AsettoCorsaTelemetry.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Asseto\\AsettoCorsaTelemetry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T18:22:06.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Program.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Program.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Program.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:37:26.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Variables.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Variables.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T18:45:38.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnumerateConnectedDevices.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Usb\\EnumerateConnectedDevices.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Usb\\EnumerateConnectedDevices.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Usb\\EnumerateConnectedDevices.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Usb\\EnumerateConnectedDevices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T20:01:10.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\MainForm.Designer.cs",
+              "ViewState": "AgIAAFEBAAAAAAAAAAAtwFoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T18:05:59.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CheckAssetoRunning.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Asseto\\CheckAssetoRunning.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Asseto\\CheckAssetoRunning.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Asseto\\CheckAssetoRunning.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Asseto\\CheckAssetoRunning.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T20:43:25.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAsseto.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IAsseto.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IAsseto.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IAsseto.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Interfaces\\IAsseto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:38:47.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Constants.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Constants.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Constants.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T20:07:56.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AssetoIO.cs",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Asseto\\AssetoIO.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Asseto\\AssetoIO.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Asseto\\AssetoIO.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Asseto\\AssetoIO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T18:17:17.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CrossThreadOps.cs",
-              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\CrossThreadOps.cs",
-              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\CrossThreadOps.cs",
-              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\CrossThreadOps.cs",
-              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\CrossThreadOps.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCcAAAABAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Utils\\CrossThreadOps.cs",
+              "RelativeDocumentMoniker": "LaRottaO.CSharp.CarSimDashboard\\Utils\\CrossThreadOps.cs",
+              "ToolTip": "C:\\Repositorios\\LA_ROTTA\\LaRottaO.CarSimDashboard\\PC-SIDE\\LaRottaO.CSharp.CarSimDashboard\\LaRottaO.CSharp.CarSimDashboard\\Utils\\CrossThreadOps.cs",
+              "RelativeToolTip": "LaRottaO.CSharp.CarSimDashboard\\Utils\\CrossThreadOps.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T18:45:16.425Z",
               "EditorCaption": ""

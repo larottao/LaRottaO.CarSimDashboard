@@ -5,8 +5,9 @@ namespace LaRottaO.CSharp.CarSimDashboard
 {
     public static class Variables
     {
+        public enum DATASOURCE
+        { ASSETO, MANUAL_INPUT }
 
-        public enum DATASOURCE { ASSETO, MANUAL_INPUT }
         public static DATASOURCE currentDataSource { get; set; }
 
         //Values extracted from the sim
@@ -21,8 +22,13 @@ namespace LaRottaO.CSharp.CarSimDashboard
         public static int equivRpmFreq { get; set; } = 0;
         public static int equivKmhFreq { get; set; } = 0;
 
-
         //Values calibrated for my motorcycle dashbord, tune as required
+
+        public static readonly ValuePair[] FuelTable =
+      {
+            new ValuePair(0, 0),
+            new ValuePair(30, 5)
+        };
 
         public static readonly ValuePair[] RealRpmTable =
         {
@@ -94,6 +100,5 @@ namespace LaRottaO.CSharp.CarSimDashboard
         };
 
         public const double scalingFactor = 1E47;
-
     }
 }
