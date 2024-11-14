@@ -24,7 +24,7 @@ namespace LaRottaO.CSharp.CarSimDashboard
             return serialPort.IsOpen;
         }
 
-        public Boolean tryPortInit(String portName)
+        public Tuple<Boolean, String> tryPortInit(String portName)
         {
             try
             {
@@ -36,12 +36,11 @@ namespace LaRottaO.CSharp.CarSimDashboard
 
                 serialPort.Open();
 
-                return true;
+                return new Tuple<Boolean, String>(true, "");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
-                return false;
+                return new Tuple<Boolean, String>(false, ex.ToString());
             }
         }
 
@@ -63,11 +62,7 @@ namespace LaRottaO.CSharp.CarSimDashboard
             {
                 serialPort.Write(message + "\n");
 
-                //Console.Write(message + "\n");
-
-                // For debug purposes you can read the response from the uC and print it
-                //string response = serialPort.ReadLine(); // This will block until a newline character is received
-                //Console.WriteLine("Received: " + response);
+                Console.Write(message + "\n");
 
                 return new Tuple<Boolean, String>(true, "SENT OK");
             }

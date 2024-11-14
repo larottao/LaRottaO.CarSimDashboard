@@ -14,6 +14,8 @@ namespace LRottaO.CSharp.SimDashboardCtrl
         private System.Timers.Timer simDataTimer;
         private System.Timers.Timer sendRpmDataTimer;
         private System.Timers.Timer sendSpeedDataTimer;
+        private System.Timers.Timer sendFuelDataTimer;
+        private System.Timers.Timer sendGearDataTimer;
 
         private PortIO portIO = new PortIO();
 
@@ -35,6 +37,16 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             sendSpeedDataTimer = new System.Timers.Timer(500);
             sendSpeedDataTimer.Elapsed += OnSpeedDataTimerElapsed;
             sendSpeedDataTimer.AutoReset = true;
+
+            // Timer for sending fuel data
+            sendFuelDataTimer = new System.Timers.Timer(1000);
+            sendFuelDataTimer.Elapsed += OnFuelDataTimerElapsed;
+            sendFuelDataTimer.AutoReset = true;
+
+            // Timer for sending gear data
+            sendGearDataTimer = new System.Timers.Timer(500);
+            sendGearDataTimer.Elapsed += OnGearDataTimerElapsed;
+            sendGearDataTimer.AutoReset = true;
         }
 
         public void StopTimers()
@@ -42,6 +54,8 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             simDataTimer.Stop();
             sendRpmDataTimer.Stop();
             sendSpeedDataTimer.Stop();
+            sendFuelDataTimer?.Stop();
+            sendGearDataTimer?.Stop();
         }
 
         private void OnSimDataTimerElapsed(object sender, ElapsedEventArgs e)
@@ -59,6 +73,16 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             SendSpeedData();
         }
 
+        private void OnFuelDataTimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            SendFuelData();
+        }
+
+        private void OnGearDataTimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            SendGearData();
+        }
+
         private void ReadSimData()
         {
             if (Variables.currentDataSource == DATASOURCE.ASSETO &&
@@ -74,10 +98,39 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             }
             else
             {
-                Variables.fuel = Convert.ToInt32(textBoxFuel.Text);
-                Variables.gear = Convert.ToInt32(textBoxGear.Text);
-                Variables.rpms = Convert.ToDouble(textBoxRPM.Text);
-                Variables.kmh =  Convert.ToDouble(textBoxKMH.Text);
+                try
+                {
+                    Variables.fuel = Convert.ToInt32(textBoxFuel.Text);
+                }
+                catch
+                {
+                    Variables.fuel = 0;
+                }
+
+                try
+                {
+                    Variables.gear = Convert.ToInt32(textBoxGear.Text);
+                }
+                catch
+                {
+                    Variables.gear = 0;
+                }
+                try
+                {
+                    Variables.rpms = Convert.ToDouble(textBoxRPM.Text);
+                }
+                catch
+                {
+                    Variables.rpms = 0;
+                }
+                try
+                {
+                    Variables.kmh =  Convert.ToDouble(textBoxKMH.Text);
+                }
+                catch
+                {
+                    Variables.kmh = 0;
+                }
             }
 
             convertRpmsAndSpeedIntoFrequencies();
@@ -107,47 +160,56 @@ namespace LRottaO.CSharp.SimDashboardCtrl
             }
         }
 
+        private void SendFuelData()
+        {
+            String message = $"#fuel:{Variables.fuel}$";
+
+            Tuple<Boolean, String> sendResult = portIO.tryToSendMessage(message);
+
+            if (!sendResult.Item1)
+            {
+                errorSendingSerialMssage(sendResult.Item2);
+            }
+        }
+
+        private void SendGearData()
+        {
+            String message = $"#gear:{Variables.gear}$";
+
+            Tuple<Boolean, String> sendResult = portIO.tryToSendMessage(message);
+
+            if (!sendResult.Item1)
+            {
+                errorSendingSerialMssage(sendResult.Item2);
+            }
+        }
+
         private void errorSendingSerialMssage(String reason)
         {
             sendRpmDataTimer.Stop();
             sendSpeedDataTimer.Stop();
+            sendFuelDataTimer.Stop();
+            sendGearDataTimer.Stop();
 
             portIO.tryClosePort();
 
-            SetControlEnabled(buttonConnectPort, true);
-            SetControlEnabled(buttonDisconnectPort, false);
+            CrossThreadOps.setControlEnabled(buttonConnectPort, true);
+            CrossThreadOps.setControlEnabled(buttonDisconnectPort, false);
 
-            MessageBox.Show(reason);
+            CrossThreadOps.SetControlText(labelInfo, reason);
 
             Console.WriteLine("ERROR WHILE SENDING DATA TROUGH SERIAL: " + reason);
         }
 
-        private void SetControlEnabled(Control control, bool enabled)
-        {
-            if (control.InvokeRequired)
-            {
-                // Use Invoke to marshal the call to the UI thread
-                control.Invoke(new Action(() => SetControlEnabled(control, enabled)));
-            }
-            else
-            {
-                // Set the control's enabled state
-                control.Enabled = enabled;
-            }
-        }
-
         private void updateFormTextboxes()
         {
-            if (Variables.currentDataSource == DATASOURCE.ASSETO)
-            {
-                textBoxRPM.Text = Convert.ToString(Variables.rpms);
-                textBoxKMH.Text = Convert.ToString(Variables.kmh);
-                textBoxFuel.Text = Convert.ToString(Variables.fuel);
-                textBoxGear.Text = Convert.ToString(Variables.gear);
+            textBoxRPM.Text = Convert.ToString(Variables.rpms);
+            textBoxKMH.Text = Convert.ToString(Variables.kmh);
+            textBoxFuel.Text = Convert.ToString(Variables.fuel);
+            textBoxGear.Text = Convert.ToString(Variables.gear);
 
-                textBoxRpmFreq.Text = Variables.equivRpmFreq.ToString();
-                textBoxKmhFreq.Text = Variables.equivKmhFreq.ToString();
-            }
+            textBoxRpmFreq.Text = Variables.equivRpmFreq.ToString();
+            textBoxKmhFreq.Text = Variables.equivKmhFreq.ToString();
         }
 
         private void convertRpmsAndSpeedIntoFrequencies()
@@ -196,6 +258,7 @@ namespace LRottaO.CSharp.SimDashboardCtrl
         private void Form1_Load(object sender, EventArgs e)
         {
             GetAvailPorts.populateComboBoxWithPortsAndDeviceNames(comboBoxComPorts);
+            Variables.currentDataSource = Variables.DATASOURCE.MANUAL_INPUT;
             simDataTimer.Start();
             dataSourceRadioButtonLogic();
         }
@@ -223,17 +286,23 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
             String portName = comboBoxComPorts.Text.Substring(0, comboBoxComPorts.Text.IndexOf("|")).Trim();
 
-            Boolean connSuccess = portIO.tryPortInit(portName);
+            Tuple<Boolean, String> connSuccess = portIO.tryPortInit(portName);
 
-            SetControlEnabled(buttonConnectPort, false);
-            SetControlEnabled(buttonDisconnectPort, true);
+            CrossThreadOps.setControlEnabled(buttonConnectPort, false);
+            CrossThreadOps.setControlEnabled(buttonDisconnectPort, true);
 
-            if (connSuccess)
+            if (connSuccess.Item1)
             {
                 dataSourceRadioButtonLogic();
 
                 sendRpmDataTimer.Start();
                 sendSpeedDataTimer.Start();
+                sendFuelDataTimer.Start();
+                sendGearDataTimer.Start();
+            }
+            else
+            {
+                labelInfo.Text = connSuccess.Item2;
             }
         }
 
@@ -253,7 +322,7 @@ namespace LRottaO.CSharp.SimDashboardCtrl
                 {
                     radioAssetoData.Checked = false;
                     radioManualInput.Checked = true;
-                    MessageBox.Show(assetoConnResult.Item2);
+                    labelInfo.Text = assetoConnResult.Item2;
                 }
             }
 
@@ -267,10 +336,13 @@ namespace LRottaO.CSharp.SimDashboardCtrl
         {
             sendRpmDataTimer.Stop();
             sendSpeedDataTimer.Stop();
+            sendFuelDataTimer.Stop();
+            sendGearDataTimer.Stop();
+
             portIO.tryClosePort();
 
-            SetControlEnabled(buttonConnectPort, true);
-            SetControlEnabled(buttonDisconnectPort, false);
+            CrossThreadOps.setControlEnabled(buttonConnectPort, true);
+            CrossThreadOps.setControlEnabled(buttonDisconnectPort, false);
         }
 
         private void FormTimer_Tick(object sender, EventArgs e)

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AsettoCorsaTelemetry.cs" />
     <Compile Include="AssetoIO.cs" />
+    <Compile Include="CrossThreadOps.cs" />
     <Compile Include="PortIO.cs" />
     <Compile Include="Utils\Interpolation.cs" />
     <Compile Include="Utils\GetAvailPorts.cs" />

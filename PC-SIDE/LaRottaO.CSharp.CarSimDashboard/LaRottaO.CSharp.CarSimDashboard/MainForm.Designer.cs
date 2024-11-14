@@ -54,6 +54,7 @@
             this.buttonDisconnectPort = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.FormTimer = new System.Windows.Forms.Timer(this.components);
+            this.labelInfo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,7 +71,6 @@
             this.textBoxKMH.TabIndex = 0;
             this.textBoxKMH.Text = "000";
             this.textBoxKMH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
             // 
             // textBoxRPM
             // 
@@ -83,7 +83,6 @@
             this.textBoxRPM.TabIndex = 1;
             this.textBoxRPM.Text = "000";
             this.textBoxRPM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-     
             // 
             // label1
             // 
@@ -126,7 +125,6 @@
             this.textBoxGear.TabIndex = 4;
             this.textBoxGear.Text = "1";
             this.textBoxGear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-      
             // 
             // label4
             // 
@@ -149,7 +147,6 @@
             this.textBoxFuel.TabIndex = 6;
             this.textBoxFuel.Text = "000";
             this.textBoxFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
             // 
             // radioAssetoData
             // 
@@ -333,13 +330,22 @@
             // FormTimer
             // 
             this.FormTimer.Enabled = true;
+            this.FormTimer.Interval = 1000;
             this.FormTimer.Tick += new System.EventHandler(this.FormTimer_Tick);
+            // 
+            // labelInfo
+            // 
+            this.labelInfo.Location = new System.Drawing.Point(12, 455);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(252, 32);
+            this.labelInfo.TabIndex = 21;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 536);
+            this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -396,6 +402,7 @@
         private System.Windows.Forms.Button buttonDisconnectPort;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Timer FormTimer;
+        private System.Windows.Forms.Label labelInfo;
     }
 }
 

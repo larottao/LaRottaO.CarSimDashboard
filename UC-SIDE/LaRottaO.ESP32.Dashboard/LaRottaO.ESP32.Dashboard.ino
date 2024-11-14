@@ -4,8 +4,19 @@
 
 #include <Arduino.h>
 
+#define ON_BOARD_LED_PIN 2
+
 #define OUTPUT_PIN1 16  // Speed pin
 #define OUTPUT_PIN2 17  // RPM pin
+
+#define OUTPUT_GEAR_PIN_1 32
+#define OUTPUT_GEAR_PIN_2 33
+#define OUTPUT_GEAR_PIN_3 25
+#define OUTPUT_GEAR_PIN_4 26
+#define OUTPUT_GEAR_PIN_5 27
+#define OUTPUT_GEAR_PIN_6 14
+#define OUTPUT_GEAR_PIN_7 12
+
 
 const int PWM_CHANNEL1 = 1;  // PWM channel for speed
 const int PWM_CHANNEL2 = 4;  // PWM channel for RPM
@@ -19,6 +30,10 @@ const char END_CHAR = '$';
 int currentSpeed = -1;  // Initialize to a value that will not match any valid frequency
 int currentRPM = -1;    // Initialize to a value that will not match any valid frequency
 
+int currentFuel = -1;
+int currentGear = -1;
+
+
 void setup() {
   Serial.begin(115200);
 
@@ -29,9 +44,24 @@ void setup() {
   // Setup PWM for RPM
   ledcSetup(PWM_CHANNEL2, PWM_FREQ_INITIAL, PWM_RESOLUTION);
   ledcAttachPin(OUTPUT_PIN2, PWM_CHANNEL2);
+
+ // Set fuel pins as outputs
+  pinMode(OUTPUT_GEAR_PIN_1, OUTPUT);
+  pinMode(OUTPUT_GEAR_PIN_2, OUTPUT);
+  pinMode(OUTPUT_GEAR_PIN_3, OUTPUT);
+  pinMode(OUTPUT_GEAR_PIN_4, OUTPUT);
+  pinMode(OUTPUT_GEAR_PIN_5, OUTPUT);
+  pinMode(OUTPUT_GEAR_PIN_6, OUTPUT);
+  pinMode(OUTPUT_GEAR_PIN_7, OUTPUT);
+
+  setAllGearPinsLow();
+
+  pinMode(ON_BOARD_LED_PIN, OUTPUT);
+
 }
 
 void loop() {
+
   if (Serial.available() > 0) {
     String message = Serial.readStringUntil('\n');
     message.trim();  // Remove any extraneous characters like newline
@@ -105,18 +135,70 @@ void setSpeed(int speed) {
 
 }
 
+void setAllGearPinsLow(){
+
+  digitalWrite(OUTPUT_GEAR_PIN_1, LOW);
+  digitalWrite(OUTPUT_GEAR_PIN_2, LOW);
+  digitalWrite(OUTPUT_GEAR_PIN_3, LOW);
+  digitalWrite(OUTPUT_GEAR_PIN_4, LOW);
+  digitalWrite(OUTPUT_GEAR_PIN_5, LOW);  
+  digitalWrite(OUTPUT_GEAR_PIN_6, LOW);  
+  digitalWrite(OUTPUT_GEAR_PIN_7, LOW);  
+
+}
+
 void setFuel(int fuel) {
-  // Logic to handle fuel value
-  Serial.println("Fuel: " + String(fuel));
+ 
+   //blinkLed();
+
 }
 
 void setGear(int gear) {
-  // Logic to handle gear value
-  Serial.println("Gear: " + String(gear));
+
+
+ if (gear != currentGear) {  
+  
+    currentGear = gear;
+
+    setAllGearPinsLow();
+
+    if(gear == 1){
+    digitalWrite(OUTPUT_GEAR_PIN_1, HIGH);
+    }
+    else if(gear == 2){   
+      digitalWrite(OUTPUT_GEAR_PIN_2, HIGH);  
+    }
+    else if(gear == 3){
+      digitalWrite(OUTPUT_GEAR_PIN_3, HIGH);
+    }
+    else if(gear == 4){
+    digitalWrite(OUTPUT_GEAR_PIN_4, HIGH);
+    }
+    else if(gear == 5){
+    digitalWrite(OUTPUT_GEAR_PIN_5, HIGH);
+    }
+    else if(gear == 6){
+    digitalWrite(OUTPUT_GEAR_PIN_6, HIGH);
+    }
+    else if(gear == 7){
+    digitalWrite(OUTPUT_GEAR_PIN_7, HIGH);
+    }
+
+    blinkLed();
+    
+  }
+
 }
 
 
 void sendUARTMessage(String message) {
   // Send a message back to the PC
   Serial.println(message);
+}
+
+void blinkLed(){
+  digitalWrite(ON_BOARD_LED_PIN,HIGH);
+  delay(300);
+  digitalWrite(ON_BOARD_LED_PIN,LOW);
+  delay(300);
 }
