@@ -17,6 +17,12 @@
 #define OUTPUT_GEAR_PIN_6 14
 #define OUTPUT_GEAR_PIN_7 12
 
+#define OUTPUT_FUEL_PIN_1 22
+#define OUTPUT_FUEL_PIN_2 21
+#define OUTPUT_FUEL_PIN_3 19
+#define OUTPUT_FUEL_PIN_4 18
+#define OUTPUT_FUEL_PIN_5 5
+
 
 const int PWM_CHANNEL1 = 1;  // PWM channel for speed
 const int PWM_CHANNEL2 = 4;  // PWM channel for RPM
@@ -53,6 +59,12 @@ void setup() {
   pinMode(OUTPUT_GEAR_PIN_5, OUTPUT);
   pinMode(OUTPUT_GEAR_PIN_6, OUTPUT);
   pinMode(OUTPUT_GEAR_PIN_7, OUTPUT);
+
+  pinMode(OUTPUT_FUEL_PIN_1, OUTPUT);
+  pinMode(OUTPUT_FUEL_PIN_2, OUTPUT);
+  pinMode(OUTPUT_FUEL_PIN_3, OUTPUT);
+  pinMode(OUTPUT_FUEL_PIN_4, OUTPUT);
+  pinMode(OUTPUT_FUEL_PIN_5, OUTPUT);
 
   setAllGearPinsLow();
 
@@ -147,10 +159,44 @@ void setAllGearPinsLow(){
 
 }
 
+void setAllFuelPinsLow(){
+
+  digitalWrite(OUTPUT_FUEL_PIN_1, LOW);
+  digitalWrite(OUTPUT_FUEL_PIN_2, LOW);
+  digitalWrite(OUTPUT_FUEL_PIN_3, LOW);
+  digitalWrite(OUTPUT_FUEL_PIN_4, LOW);
+  digitalWrite(OUTPUT_FUEL_PIN_5, LOW);
+  
+}
+
 void setFuel(int fuel) {
  
-   //blinkLed();
+   
+ if (fuel != currentFuel) {  
+  
+    currentFuel = fuel;
 
+    setAllFuelPinsLow();
+
+    if(fuel == 1){
+    digitalWrite(OUTPUT_FUEL_PIN_1, HIGH);
+    }
+    else if(fuel == 2){   
+      digitalWrite(OUTPUT_FUEL_PIN_2, HIGH);  
+    }
+    else if(fuel == 3){
+      digitalWrite(OUTPUT_FUEL_PIN_3, HIGH);
+    }
+    else if(fuel == 4){
+    digitalWrite(OUTPUT_FUEL_PIN_4, HIGH);
+    }
+    else if(fuel == 5){
+    digitalWrite(OUTPUT_FUEL_PIN_5, HIGH);
+    }   
+
+    blinkLed();
+
+  }
 }
 
 void setGear(int gear) {
