@@ -3,6 +3,10 @@ Objective
 
 Interface a chinese motorcycle dashboard to a game (Asseto Corsa) to indicate speed, engine RPMs, selected gear and fuel level. 
 
+2024-11-14 Changelog
+
+- Read values from game for gearbox and fuel level indicator, and show them on the dashboard [COMPLETE]
+ 
 2024-09-20 Changelog
 
 - Show RPM and SPEED using ESP32 [SUCCESS] - The physical dashboard requires a slower update rate for the speed data than the engine RPMs data. So, instead of sending RPM, Speed, Gas and Fuel data on a single serial packet, the solution was using independent data packets for each item, sent at different rates with different timers.
