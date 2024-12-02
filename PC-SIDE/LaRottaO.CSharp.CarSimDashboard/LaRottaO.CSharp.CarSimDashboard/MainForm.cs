@@ -13,6 +13,9 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 {
     public partial class MainForm : Form
     {
+
+        GaugesForm gaugesForm = new GaugesForm();
+
         private System.Timers.Timer readDataTimer;
         private System.Timers.Timer sendRpmDataTimer;
         private System.Timers.Timer sendSpeedDataTimer;
@@ -170,13 +173,20 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         private void updateFormTextboxes()
         {
-            textBoxRPM.Text = Convert.ToString(Variables.rpms);
-            textBoxKMH.Text = Convert.ToString(Variables.kmh);
-            textBoxFuel.Text = Convert.ToString(Variables.fuel);
-            textBoxGear.Text = Convert.ToString(Variables.gear);
+            if (Variables.currentDataSource.Equals(DATASOURCE.ASSETO))
+            {
+                textBoxRPM.Text = Convert.ToString(Variables.rpms);
+                textBoxKMH.Text = Convert.ToString(Variables.kmh);
+                textBoxFuel.Text = Convert.ToString(Variables.fuel);
+                textBoxGear.Text = Convert.ToString(Variables.gear);
 
-            textBoxRpmFreq.Text = Variables.equivRpmFreq.ToString();
-            textBoxKmhFreq.Text = Variables.equivKmhFreq.ToString();
+                textBoxRpmFreq.Text = Variables.equivRpmFreq.ToString();
+                textBoxKmhFreq.Text = Variables.equivKmhFreq.ToString();              
+            }
+
+            gaugesForm.setSpeedOnGauge(Variables.kmh);
+            gaugesForm.setRpmOnGauge(Variables.rpms);
+            gaugesForm.setGear(Variables.gear);
         }
 
         private void convertRpmsAndSpeedIntoFrequencies()
@@ -223,6 +233,10 @@ namespace LRottaO.CSharp.SimDashboardCtrl
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        
+            gaugesForm.Show();
+
             BoardInitialization();
             AssetoInitialization();
 

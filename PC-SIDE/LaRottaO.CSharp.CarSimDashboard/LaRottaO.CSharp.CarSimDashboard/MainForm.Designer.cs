@@ -57,17 +57,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
             this.tabPageConf = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxFullTankLiters = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageConf.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxKMH
@@ -75,7 +75,7 @@
             this.textBoxKMH.Enabled = false;
             this.textBoxKMH.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKMH.Location = new System.Drawing.Point(7, 76);
-            this.textBoxKMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxKMH.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKMH.Name = "textBoxKMH";
             this.textBoxKMH.Size = new System.Drawing.Size(113, 54);
             this.textBoxKMH.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.textBoxRPM.Enabled = false;
             this.textBoxRPM.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRPM.Location = new System.Drawing.Point(6, 19);
-            this.textBoxRPM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRPM.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRPM.Name = "textBoxRPM";
             this.textBoxRPM.Size = new System.Drawing.Size(113, 54);
             this.textBoxRPM.TabIndex = 1;
@@ -132,7 +132,7 @@
             this.textBoxGear.Enabled = false;
             this.textBoxGear.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGear.Location = new System.Drawing.Point(6, 190);
-            this.textBoxGear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxGear.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxGear.MaxLength = 1;
             this.textBoxGear.Name = "textBoxGear";
             this.textBoxGear.Size = new System.Drawing.Size(113, 54);
@@ -156,7 +156,7 @@
             this.textBoxFuel.Enabled = false;
             this.textBoxFuel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFuel.Location = new System.Drawing.Point(6, 133);
-            this.textBoxFuel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFuel.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFuel.MaxLength = 3;
             this.textBoxFuel.Name = "textBoxFuel";
             this.textBoxFuel.Size = new System.Drawing.Size(113, 54);
@@ -168,7 +168,7 @@
             // 
             this.radioAssetoData.Checked = true;
             this.radioAssetoData.Location = new System.Drawing.Point(14, 24);
-            this.radioAssetoData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioAssetoData.Margin = new System.Windows.Forms.Padding(2);
             this.radioAssetoData.Name = "radioAssetoData";
             this.radioAssetoData.Size = new System.Drawing.Size(180, 42);
             this.radioAssetoData.TabIndex = 8;
@@ -181,7 +181,7 @@
             // 
             this.radioManualInput.AutoSize = true;
             this.radioManualInput.Location = new System.Drawing.Point(14, 69);
-            this.radioManualInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioManualInput.Margin = new System.Windows.Forms.Padding(2);
             this.radioManualInput.Name = "radioManualInput";
             this.radioManualInput.Size = new System.Drawing.Size(102, 21);
             this.radioManualInput.TabIndex = 9;
@@ -193,7 +193,7 @@
             // 
             this.textBoxRpmFreq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRpmFreq.Location = new System.Drawing.Point(61, 60);
-            this.textBoxRpmFreq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRpmFreq.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRpmFreq.Name = "textBoxRpmFreq";
             this.textBoxRpmFreq.Size = new System.Drawing.Size(28, 25);
             this.textBoxRpmFreq.TabIndex = 10;
@@ -203,7 +203,7 @@
             // 
             this.textBoxKmhFreq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKmhFreq.Location = new System.Drawing.Point(163, 58);
-            this.textBoxKmhFreq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxKmhFreq.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxKmhFreq.Name = "textBoxKmhFreq";
             this.textBoxKmhFreq.Size = new System.Drawing.Size(28, 25);
             this.textBoxKmhFreq.TabIndex = 11;
@@ -215,7 +215,7 @@
             this.checkBoxUseFreqTable.Checked = true;
             this.checkBoxUseFreqTable.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxUseFreqTable.Location = new System.Drawing.Point(16, 33);
-            this.checkBoxUseFreqTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxUseFreqTable.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxUseFreqTable.Name = "checkBoxUseFreqTable";
             this.checkBoxUseFreqTable.Size = new System.Drawing.Size(210, 21);
             this.checkBoxUseFreqTable.TabIndex = 12;
@@ -228,9 +228,9 @@
             this.groupBox1.Controls.Add(this.radioManualInput);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(211, 137);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(206, 107);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -264,9 +264,9 @@
             this.groupBox2.Controls.Add(this.radioMatchRealScale);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(14, 121);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(229, 93);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
@@ -276,7 +276,7 @@
             // 
             this.radio10KRedLineMatchMaxPw.Checked = true;
             this.radio10KRedLineMatchMaxPw.Location = new System.Drawing.Point(16, 47);
-            this.radio10KRedLineMatchMaxPw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio10KRedLineMatchMaxPw.Margin = new System.Windows.Forms.Padding(2);
             this.radio10KRedLineMatchMaxPw.Name = "radio10KRedLineMatchMaxPw";
             this.radio10KRedLineMatchMaxPw.Size = new System.Drawing.Size(273, 32);
             this.radio10KRedLineMatchMaxPw.TabIndex = 10;
@@ -289,7 +289,7 @@
             // 
             this.radioMatchRealScale.AutoSize = true;
             this.radioMatchRealScale.Location = new System.Drawing.Point(16, 22);
-            this.radioMatchRealScale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioMatchRealScale.Margin = new System.Windows.Forms.Padding(2);
             this.radioMatchRealScale.Name = "radioMatchRealScale";
             this.radioMatchRealScale.Size = new System.Drawing.Size(158, 21);
             this.radioMatchRealScale.TabIndex = 9;
@@ -301,7 +301,7 @@
             // 
             this.buttonConnectPort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConnectPort.Location = new System.Drawing.Point(336, 42);
-            this.buttonConnectPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonConnectPort.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConnectPort.Name = "buttonConnectPort";
             this.buttonConnectPort.Size = new System.Drawing.Size(81, 31);
             this.buttonConnectPort.TabIndex = 16;
@@ -314,7 +314,7 @@
             this.buttonDisconnectPort.Enabled = false;
             this.buttonDisconnectPort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDisconnectPort.Location = new System.Drawing.Point(336, 77);
-            this.buttonDisconnectPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDisconnectPort.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDisconnectPort.Name = "buttonDisconnectPort";
             this.buttonDisconnectPort.Size = new System.Drawing.Size(81, 31);
             this.buttonDisconnectPort.TabIndex = 17;
@@ -362,7 +362,7 @@
             this.tabControl1.Controls.Add(this.tabPageMain);
             this.tabControl1.Controls.Add(this.tabPageConf);
             this.tabControl1.Location = new System.Drawing.Point(10, 11);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(443, 288);
@@ -383,9 +383,9 @@
             this.tabPageMain.Controls.Add(this.label4);
             this.tabPageMain.Controls.Add(this.label3);
             this.tabPageMain.Location = new System.Drawing.Point(4, 26);
-            this.tabPageMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageMain.Name = "tabPageMain";
-            this.tabPageMain.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageMain.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageMain.Size = new System.Drawing.Size(435, 258);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "Main";
@@ -397,27 +397,13 @@
             this.tabPageConf.Controls.Add(this.groupBox3);
             this.tabPageConf.Controls.Add(this.groupBox2);
             this.tabPageConf.Location = new System.Drawing.Point(4, 26);
-            this.tabPageConf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageConf.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageConf.Name = "tabPageConf";
-            this.tabPageConf.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageConf.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageConf.Size = new System.Drawing.Size(435, 258);
             this.tabPageConf.TabIndex = 1;
             this.tabPageConf.Text = "Config";
             this.tabPageConf.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.checkBoxUseFreqTable);
-            this.groupBox3.Controls.Add(this.textBoxKmhFreq);
-            this.groupBox3.Controls.Add(this.textBoxRpmFreq);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(14, 14);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(229, 102);
-            this.groupBox3.TabIndex = 25;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Data to PWM";
             // 
             // groupBox4
             // 
@@ -451,20 +437,34 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Full tank liters";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.checkBoxUseFreqTable);
+            this.groupBox3.Controls.Add(this.textBoxKmhFreq);
+            this.groupBox3.Controls.Add(this.textBoxRpmFreq);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Location = new System.Drawing.Point(14, 14);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(229, 102);
+            this.groupBox3.TabIndex = 25;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Data to PWM";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(462, 337);
+            this.ClientSize = new System.Drawing.Size(469, 348);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.label7);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Physical Dashboard for Asseto Corsa";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -477,10 +477,10 @@
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             this.tabPageConf.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

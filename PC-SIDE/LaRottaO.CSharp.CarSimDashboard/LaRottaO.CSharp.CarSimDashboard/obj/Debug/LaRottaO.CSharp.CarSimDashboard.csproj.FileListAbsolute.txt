@@ -18,3 +18,14 @@ C:\Repositorios\LA_ROTTA\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSim
 C:\Repositorios\LA_ROTTA\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.csproj.CoreCompileInputs.cache
 C:\Repositorios\LA_ROTTA\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.exe
 C:\Repositorios\LA_ROTTA\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.pdb
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\bin\Debug\LaRottaO.CSharp.CarSimDashboard.exe.config
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\bin\Debug\LaRottaO.CSharp.CarSimDashboard.exe
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\bin\Debug\LaRottaO.CSharp.CarSimDashboard.pdb
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.csproj.AssemblyReference.cache
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LRottaO.CSharp.SimDashboardCtrl.MainForm.resources
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.Properties.Resources.resources
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.csproj.GenerateResource.cache
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.csproj.CoreCompileInputs.cache
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.exe
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.pdb
+C:\Repostorios\LaRottaO.CarSimDashboard\PC-SIDE\LaRottaO.CSharp.CarSimDashboard\LaRottaO.CSharp.CarSimDashboard\obj\Debug\LaRottaO.CSharp.CarSimDashboard.GaugesForm.resources

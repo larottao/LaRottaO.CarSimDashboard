@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,12 +48,21 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asseto\AsettoCorsaTelemetry.cs" />
     <Compile Include="Asseto\AssetoIO.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="GaugeElement.cs" />
     <Compile Include="Interfaces\IAsseto.cs" />
+    <Compile Include="GaugesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaugesForm.Designer.cs">
+      <DependentUpon>GaugesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\UsbService.cs" />
     <Compile Include="Usb\EnumerateConnectedDevices.cs" />
     <Compile Include="Usb\Models\ConnectedDevice.cs" />
@@ -71,6 +83,9 @@
     <Compile Include="Asseto\Models\StaticInfo.cs" />
     <Compile Include="Asseto\Models\ValuePair.cs" />
     <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="GaugesForm.resx">
+      <DependentUpon>GaugesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
