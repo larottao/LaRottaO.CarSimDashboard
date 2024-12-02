@@ -5,7 +5,7 @@ Interface a chinese motorcycle dashboard to a game (Asseto Corsa) to indicate sp
 
 2024-12-02
 
-- Added a digital version of the gauges (WIP) that can be projected on an auxiliary screen, in case the user doesn't want / have a physical dashboard
+- Added a digital version of the gauges (WIP) that can be projected on an auxiliary screen, in case the user doesn't want / have a physical dashboard. It's pending to reuse the same logic to animate the fuel and temp needles.
 
 2024-11-14 Changelog
 
