@@ -33,3 +33,5 @@ NOTES: Fuel Level and Gear are not yet implemented
 ![image](https://github.com/user-attachments/assets/2f610a38-3bf6-4e99-8796-456524584b2e)
 
 ![digital_gauges_example](https://github.com/user-attachments/assets/9ba62d27-6f5e-4744-9972-12dae03cf7e2)
+
+![1731807256374](https://github.com/user-attachments/assets/6db91c17-be48-4048-a698-536b90b1561f)
